@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+     <script src="scripts/articleInfo.js"></script>
+ 
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+		<script src="toastr/toastr.min.js"></script>
+    	<link href="toastr/toastr.min.css" rel="stylesheet"/>
+		
+    </head>
+
+    <body>
+    <div class="col-sm-1 middle-border"></div>
+                        
+    <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Add new Article</h3>
+	                            		<p>Fill in the form below to add your article:</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                            </div>
+	                            <div id="formaArt" class="form-bottom">
+				                     
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-title">Title</label>
+				                        	<input type="text" readonly="readonly" name="form-title" placeholder="Title..." class="form-title form-control" id="formRegister-title">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-keywords">Keywords</label>
+				                        	<input type="text" readonly="readonly" name="form-keywords" placeholder="Keywords..." class="form-keywords form-control" id="formRegister-keywords">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-abstract">Abstract</label>
+				                        	<input type="text" readonly="readonly" name="form-abstract" placeholder="Abstract..." class="form-abstract form-control" id="formRegister-abstract">
+				                        </div>
+				                       <div class="form-group">
+				                        	<label class="sr-only" for="form-authorName">Author name</label>
+				                        	<input type="text" readonly="readonly" name="form-authorName" placeholder="Author name" class="form-authorName form-control" id="formRegister-authorname">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-scfield">Scientific field</label>
+				                        	<input type="text" readonly="readonly" name="form-scfield" placeholder="Scientific field.." class="form-scfield form-control" id="formRegister-scfield">
+				                        </div>
+				                      
+				                        	<a target="_blank" id="linkfile_name" ></a>
+			
+				                    
+				                        <div id="buttonsDiv">
+				                        <button type="button" onclick="buttonAcceptClick()" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right"></span>Accept</button>
+			                    	<button type="button" onclick="buttonDeclineClick()" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right"></span>Decline</button>
+			                    	</div>
+			                    	<div id="CommentDiv"></div>
+			                    </div>
+			                    
+                        	</div>
+                        	
+                        </div>
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+    
+    </body></html>

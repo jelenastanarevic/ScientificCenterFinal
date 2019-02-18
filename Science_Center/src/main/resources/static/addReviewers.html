@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table {
+    font-family: arial, sans-serif;
+  
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+h4{
+	margin-left:21.5%;
+	color:white;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+tr:nth-child(odd) {
+    background-color: #003366;
+    color:white;
+    
+}
+.TextBox > div {
+    margin:0 auto;
+    width:250px;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("science.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+</style>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+     <script src="scripts/addReviewers.js"></script>
+ 
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+		<script src="toastr/toastr.min.js"></script>
+    	<link href="toastr/toastr.min.css" rel="stylesheet"/>
+		
+    </head>
+
+    <body>
+    <div class="col-sm-1 middle-border"></div>
+                        
+                       	
+                        	
+                        		<div  id="reviewersDiv">
+                        		<h4 style="color:white;">Select reviewers</h4>
+	        <table width="200" id="reviewersTable">
+	        	<tr>
+	        		
+	        	 	<th>First name</th>
+	        	 
+	        	 	<th>Last name</th>
+	        	 
+	        	 	<th >Email</th>
+	        	 	<th></th>	
+	        	 	
+	        	 	
+	        	 	
+	        	</tr>
+	        </table>
+                        		</div>
+                        		<div id="added"><p style="color:white;">Added reviewers: <span style="color:white;" id="pAdded"></span></p></div>
+                        	<button onclick="finish()">Finish adding</button>
+                        
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+    
+    </body></html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Search articles</title>
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        
+        
+     <script src="scripts/search.js"></script>
+ 
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+		<script src="toastr/toastr.min.js"></script>
+    	<link href="toastr/toastr.min.css" rel="stylesheet"/>
+		
+    </head>
+
+    <body>
+    <div class="col-sm-1 middle-border"></div>
+                        
+    <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Search articles</h3>
+	                            		<p>Fill in the search fields to filter out articles:</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                            </div>
+	                            <div id="formaSerach" class="form-bottom">
+	                            
+	
+								
+				                    
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-magazine-name">Magazine name</label>
+				                        	<input type="text" name="form-magazine-name" placeholder="Magazine name..." class="form-magazine-name form-control" id="formRegister-magazine-name">
+				                        	<span style="margin-right:20px;"><input  type="checkbox" id="and-magazinename"> AND</span>
+				                        	<span style="margin-right:200px;"><input type="checkbox" id="or-magazinename"> OR</span>
+				                        	<input  type="checkbox" id="phrase-query-magazinename"> Phrase query
+				                        	<hr/>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-article-title">Article title</label>
+				                        	<input type="text" name="form-article-title" placeholder="Article title..." class="form-article-title form-control" id="formRegister-article-title">
+				                       		<span style="margin-right:20px;"><input  type="checkbox" id="and-articletitle"> AND</span>
+				                        	<span style="margin-right:200px;"><input type="checkbox" id="or-articletitle"> OR</span>
+				                        	<input  type="checkbox" id="phrase-query-articletitle"> Phrase query
+				                        	<hr/>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-apstract">Abstract</label>
+				                        	<input type="text" name="form-apstract" placeholder="Apstract..." class="form-apstract form-control" id="formRegister-form-apstract">
+				                       		<span style="margin-right:20px;"><input  type="checkbox" id="and-apstract"> AND</span>
+				                        	<span style="margin-right:200px;"><input type="checkbox" id="or-apstract"> OR</span>
+				                        	<input  type="checkbox" id="phrase-query-apstract"> Phrase query
+				                        	<hr/>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-name-surname">Name and surname of an author</label>
+				                        	<input type="text" name="form-name-surname" placeholder="Author name and surname..." class="form-name-surname form-control" id="formRegister-name-surname">
+				                        	<span style="margin-right:20px;"><input  type="checkbox" id="and-namesurname"> AND</span>
+				                        	<input type="checkbox" id="or-namesurname"> OR
+				                        	
+				                        	<hr/>
+				                         </div>
+				                       <div class="form-group">
+				                        	<label class="sr-only" for="form-keywords">Keywords</label>
+				                        	<input type="text" name="form-keywords" placeholder="Enter keywords separated by space" class="form-keywords form-control" id="formRegister-keywords">
+				                        	<span style="margin-right:20px;"><input  type="checkbox" id="and-keywords"> AND</span>
+				                        	<input type="checkbox" id="or-keywords"> OR
+				                        	
+				                        	<hr/>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-content">Content</label>
+				                        	<textarea name="form-textarea" placeholder="Enter content..." class="form-content form-control" id="formRegister-content"></textarea>
+				                        	<span style="margin-right:20px;"><input  type="checkbox" id="and-content"> AND</span>
+				                        	<span style="margin-right:200px;"><input type="checkbox" id="or-content"> OR</span>
+				                        	<input  type="checkbox" id="phrase-query-content"> Phrase query
+				                        	<hr/>
+				                        </div>
+				                        
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-scfield">Scientific fields</label>
+				                       		<select id="scfield-select"></select><br/>
+				                       		<span style="margin-right:20px;"><input  type="checkbox" id="and-scfield"> AND</span>
+				                        	<input type="checkbox" id="or-scfield"> OR
+				                        	
+				                        	<hr/>
+				                        </div>
+				                        
+				                        
+				                        <button type="button" onclick="finishSetting()" class="btn"><span class="glyphicon glyphicon-arrow-right"></span>Search</button>
+				                    
+				                    <br/>
+				                    
+			                    	</div>
+				                     
+			              </div>
+			                   
+</div>
+                        	
+                        	<div id="results" class="col-sm-5">
+                        		<!--<div class="form-box">
+                        			  <div class="panel panel-primary">
+                        	              <div class="form-top">
+											<div id="headerCo" class="panel-heading"></div>
+										   </div>
+										   
+										   <div class="form-bottom">
+											<div  class="panel-body" ><div id="bodyCo" ></div></div>
+                        				   </div>
+                        			</div>
+                        		</div>-->
+                        	</div>
+                        
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+    
+    </body>
